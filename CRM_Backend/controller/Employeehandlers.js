@@ -55,24 +55,7 @@ exports.deleteSingleEmployeeDetails = async(req,res)=>{
     }
 }
 
-exports.getEmployeeCount = async(req,res) =>{
-    try{
-        const total = await EmployeeSchema.countDocuments();
-        const developers = await EmployeeSchema.countDocuments({role: 'Developer'})
-        const managers = await EmployeeSchema.countDocuments({role:'Manager'})
-        const sales = await EmployeeSchema.countDocuments({role:'Sales'})
 
-        res.status(200).json({
-            total,
-            developers,
-            managers,
-            sales
-        });
-    }catch(err){
-        res.status(500).json({message:"Failed to get count",error:err.message})
-    }
-
-}
 
 
 
