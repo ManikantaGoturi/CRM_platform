@@ -18,7 +18,7 @@ const App = () => {
         <div className="p-4 md:p-6 bg-gray-50 flex-1">
           <Routes>
             <Route path="/employee" element={<Employee />} />
-            <Route path="/dashboard" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
             <Route path="/report" element={<Reports/>}/>
             <Route path="/settings" element={<Settings/>}/>
           </Routes>
